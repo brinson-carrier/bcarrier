@@ -1,12 +1,11 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  output: "export",
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: "export",             // static export
   images: {
-    unoptimized: true, // Required for GitHub Pages
+    unoptimized: true,          // Necessary for static sites (especially for GitHub Pages)
   },
-  basePath: "/bcarrier", // Adjust to your GitHub repository name
+  basePath: "/bcarrier",
   assetPrefix: "/bcarrier",
 };
 
-export default nextConfig;
+module.exports = nextConfig;
