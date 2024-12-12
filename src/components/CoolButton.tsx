@@ -16,14 +16,13 @@ const CoolButton: React.FC<CoolButtonProps> = ({ text, onClick }) => {
         color: "#FFFFFF",
         border: "none",
         borderRadius: "8px",
-        padding: "10px 20px",
-        width: "150px",
-        height: "50px",
+        padding: "10px",
         fontSize: "16px",
         fontWeight: "bold",
         boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
         transition: "background-color 0.3s, box-shadow 0.3s",
         cursor: "pointer",
+        margin: "0 4px", // Optional spacing between buttons
       }}
       onMouseEnter={(e) =>
         Object.assign(e.currentTarget.style, {
