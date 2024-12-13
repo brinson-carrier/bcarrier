@@ -1,11 +1,15 @@
 "use client";
 
 // import Link from "next/link";
+import MenuButton from "./MenuButton";
 import CoolButton from "./CoolButton";
 
 const Header = () => {
   return (
     <div className="flex flex-wrap w-full gap-4">
+      <div>
+        <MenuButton></MenuButton>
+      </div>
       <div className="flex-1 min-w-[150px]">
         <CoolButton text="Button 1" onClick={() => console.log("Button 1 clicked")} />
       </div>
