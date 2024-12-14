@@ -8,8 +8,8 @@ const nextConfig = {
   // remove when running localy 
   // allow when deploying
   
-  basePath:  "/bcarrier",
-  assetPrefix: "/bcarrier",
+  // basePath:  "/bcarrier",
+  // assetPrefix: "/bcarrier",
 };
 
 module.exports = nextConfig;

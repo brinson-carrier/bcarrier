@@ -1,41 +1,21 @@
 "use client";
-
-import React from "react";
+import React from 'react';
+import CoolButton from './CoolButton';
 
 interface HeaderProps {
-  isOpen: boolean;
-  onToggle: () => void;
+  name: string;
+  onMenuClick: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ isOpen, onToggle }) => {
+const Header: React.FC<HeaderProps> = ({ name, onMenuClick }) => {
   return (
-    <div className="flex items-center justify-between w-full h-[15vw] max-h-[100px] bg-gray-800 text-white px-4">
-      {/* Hamburger/Close Button */}
-      <button
-        className="flex items-center justify-center bg-gray-700 rounded-full"
-        onClick={onToggle}
-        aria-label="Toggle Menu"
-        style={{
-          width: "15vw", // 15% of the viewport width
-          height: "15vw", // Keep the button square
-          maxWidth: "100px", // Cap the maximum size
-          maxHeight: "100px", // Cap the maximum size
-        }}
-      >
-        {isOpen ? (
-          <span style={{ fontSize: "10vw", maxWidth: "60px" }}>✖</span> // X Icon
-        ) : (
-          <span style={{ fontSize: "10vw", maxWidth: "60px" }}>☰</span> // Hamburger Icon
-        )}
-      </button>
-
-      {/* Name */}
-      <h1 className="text-xl sm:text-2xl font-bold flex-grow text-right">
-        Your Name
+    <header className="flex items-center w-full min-h-[50px] max-h-[115px] h-[10vh] bg-blue-500 shadow-md fixed top-0 left-0">
+      <CoolButton text={'☰'} onClick={onMenuClick}/>
+      <h1 className="flex-grow text-left text-white text-xl font-bold pl-4">
+        {name}
       </h1>
-    </div>
+    </header>
   );
 };
 
 export default Header;
-
