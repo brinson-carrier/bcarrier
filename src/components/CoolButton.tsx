@@ -13,7 +13,10 @@ const CoolButton: React.FC<CoolButtonProps> = ({ text, onClick }) => {
         onClick={onClick} 
         className="flex-shrink-0 
         min-w-[15%] 
-        max-w-[100px]  
+        max-w-[100px]
+        min-h-[50px]
+        max-h-[115px]
+        h-[10vh]
         flex 
         items-center 
         justify-center 
