@@ -1,17 +1,15 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production';
+
 
 const nextConfig = {
-  output: "export",             // static export
+  output: "export",
   images: {
     unoptimized: true,
   },
-  // remove when running localy 
-  // allow when deploying
+  basePath: isProd ? '/bcarrier' : '',
+  assetPrefix: isProd ? '/bcarrier' : '',
   
-  basePath:  "/bcarrier",
-  assetPrefix: "/bcarrier",
-  
-  "homepage": "https://brinson-carrier.github.io/bcarrier/"
 };
 
 module.exports = nextConfig;
