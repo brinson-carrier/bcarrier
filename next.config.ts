@@ -7,8 +7,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: isProd ? 'https://brinson-carrier.github.io/bcarrier' : '',
-  assetPrefix: isProd ? 'https://brinson-carrier.github.io/bcarrier' : '',
+  basePath: isProd ? '/bcarrier' : '',
+  assetPrefix: isProd ? '/bcarrier' : '',
   
 };
 

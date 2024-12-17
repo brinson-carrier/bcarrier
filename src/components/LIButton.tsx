@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import LinkedInIcon from "/public/images/LI-In-Bug.png"
 
 interface LIButtonProps {
   url: string;
@@ -12,7 +13,7 @@ const LIButton: React.FC<LIButtonProps> = ({ url }) => {
     <button>
         <a href={url} target="_blank" rel="noopener noreferrer" >
           <Image 
-            src="/images/LI-In-Bug.png"
+            src={LinkedInIcon}
             alt="LinkedIn" 
             width={24} 
             height={24} 
