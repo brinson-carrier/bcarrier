@@ -12,8 +12,8 @@ const Header: React.FC<HeaderProps> = ({ name, onMenuClick }) => {
     <header className="flex
     items-center
     w-full
-    min-h-[50px]
-    max-h-[115px]
+    min-h-[40px]
+    max-h-[60px]
     h-[10vh]
     bg-blue-500
     shadow-md
@@ -22,9 +22,9 @@ const Header: React.FC<HeaderProps> = ({ name, onMenuClick }) => {
     left-0">
       <CoolButton text={'☰'} onClick={onMenuClick}/>
       <h1 className="flex-grow
-        text-left
+        text-center
         text-white
-        text-xl
+        text-4xl
         font-bold
         pl-4">
           {name}

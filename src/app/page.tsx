@@ -1,10 +1,14 @@
 "use client";
 
+import Contact from "@/components/Contact";
 import Header from "@/components/Header";
 import SlidingMenu from "@/components/SlidingMenu";
 import { useState } from "react";
 
 export default function Home() {
+
+  const email = "BrinsonCarrier@gmail.com";
+  const LI_URL = "https://linkedin.com/in/brinson-carrier-3aa612342";
 
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -22,15 +26,19 @@ export default function Home() {
     className={`flex flex-col h-screen transform transition-transform duration-300 ${menuOpen ? 'translate-x-64' : ''}`}
   >
     {/* Header */}
-    <header className="flex items-center min-h-[50px] max-h-[115px] h-[10vh] bg-blue-500 shadow-md">
-      <Header name={"first last"} onMenuClick={ toggleMenu }/>
-      <h1 className="text-white text-xl font-bold ml-4">My Page</h1>
+    <header className="flex items-center
+    min-h-[40px]
+    max-h-[60px]
+    h-[10vh]
+    shadow-md">
+      <Header name={"Brinson Carrier"} onMenuClick={ toggleMenu }/>
     </header>
 
     {/* Main Content */}
     <main className="flex-1 bg-gray-200 overflow-hidden text-black">
       <p>content</p>
     </main>
+    <Contact email={email} LI_URL={LI_URL} />
   </div>
 </div>
 
