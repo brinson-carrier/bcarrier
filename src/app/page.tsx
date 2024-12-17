@@ -11,15 +11,20 @@ export default function Home() {
   const LI_URL = "https://linkedin.com/in/brinson-carrier-3aa612342";
 
   const [menuOpen, setMenuOpen] = useState(false);
-
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const [selectedSection, setSelectedSection] = useState<string | null>(null);
+  const handleSectionSelect = (section: string) => {
+    setSelectedSection(section); // Update the currently selected section
+    console.log('Selected Section:', section); // For debugging purposes
   };
 
   return (
 <div className="relative overflow-hidden h-screen">
   {/* Sliding Menu */}
-  <SlidingMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
+  <SlidingMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} onSectionSelect={handleSectionSelect} />
 
   {/* Page Layout */}
   <div 
@@ -36,7 +41,11 @@ export default function Home() {
 
     {/* Main Content */}
     <main className="flex-1 bg-gray-200 overflow-hidden text-black">
-      <p>content</p>
+      {selectedSection === 'resume' && <p>This is the Resume Section</p>}
+      {selectedSection === 'about me' && <p>This is the About Me Section</p>}
+      {selectedSection === 'education' && <p>This is the Education Section</p>}
+        
+      {!selectedSection && <p>content</p>}
     </main>
     <Contact email={email} LI_URL={LI_URL} />
   </div>
