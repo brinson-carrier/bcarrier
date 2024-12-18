@@ -28,6 +28,7 @@ export default function Home() {
 
   {/* Page Layout */}
   <div 
+  className={`flex flex-col min-h-screen transform transition-transform duration-300 ${menuOpen ? 'translate-x-64' : ''}`}
   >
     {/* Header */}
     <header className="flex items-center
@@ -46,7 +47,9 @@ export default function Home() {
         
       {!selectedSection && <p>content</p>}
     </main>
-    <Contact email={email} LI_URL={LI_URL} />
+    <footer className="mt-auto">
+      <Contact email={email} LI_URL={LI_URL} />
+    </footer>
   </div>
 </div>
 
