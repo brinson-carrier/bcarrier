@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Resume: React.FC = () => {
-    const resumePath = '/files/carrier_resume_web.pdf';
+    const resumePath = `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/files/carrier_resume_web.pdf`;
 
   return (
     <div className="p-4">
