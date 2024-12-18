@@ -3,6 +3,7 @@
 import Contact from "@/components/Contact";
 import Header from "@/components/Header";
 import SlidingMenu from "@/components/SlidingMenu";
+import Resume from "@/components/Resume";
 import { useState } from "react";
 
 export default function Home() {
@@ -18,17 +19,15 @@ export default function Home() {
   const [selectedSection, setSelectedSection] = useState<string | null>(null);
   const handleSectionSelect = (section: string) => {
     setSelectedSection(section); // Update the currently selected section
-    console.log('Selected Section:', section); // For debugging purposes
   };
 
   return (
-<div className="relative overflow-hidden h-screen">
+<div className="relative">
   {/* Sliding Menu */}
   <SlidingMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} onSectionSelect={handleSectionSelect} />
 
   {/* Page Layout */}
   <div 
-    className={`flex flex-col h-screen transform transition-transform duration-300 ${menuOpen ? 'translate-x-64' : ''}`}
   >
     {/* Header */}
     <header className="flex items-center
@@ -40,8 +39,8 @@ export default function Home() {
     </header>
 
     {/* Main Content */}
-    <main className="flex-1 bg-gray-200 overflow-hidden text-black">
-      {selectedSection === 'resume' && <p>This is the Resume Section</p>}
+    <main className="flex-1 bg-gray-200 overflow-auto text-black">
+      {selectedSection === 'resume' && <Resume />}
       {selectedSection === 'about me' && <p>This is the About Me Section</p>}
       {selectedSection === 'education' && <p>This is the Education Section</p>}
         
