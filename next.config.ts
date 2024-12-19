@@ -7,8 +7,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: isProd ? '/bcarrier' : '',
-  assetPrefix: isProd ? '/bcarrier' : '',
+  basePath: isProd ? '' : '',
+  assetPrefix: isProd ? '' : '',
   
 };
 
