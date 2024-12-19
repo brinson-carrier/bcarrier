@@ -11,6 +11,7 @@ export default function Home() {
 
   const email = "BrinsonCarrier@gmail.com";
   const LI_URL = "https://linkedin.com/in/brinson-carrier-3aa612342";
+  const GH_URL = "https://github.com/brinson-carrier"
 
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => {
@@ -49,7 +50,7 @@ export default function Home() {
       {!selectedSection && <AboutMe />}
     </main>
     <footer className="mt-auto">
-      <Contact email={email} LI_URL={LI_URL} />
+      <Contact email={email} LI_URL={LI_URL} GH_URL={GH_URL} />
     </footer>
   </div>
 </div>
