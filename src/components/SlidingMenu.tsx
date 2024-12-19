@@ -17,12 +17,6 @@ const SlidingMenu: React.FC<SlidingMenuProps> = ({ isOpen, onClose, onSectionSel
     <aside 
       className={`fixed top-0 left-0 h-full w-64 bg-gray-800 text-white shadow-lg transform transition-transform duration-300 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
     >
-      <button 
-        onClick={onClose} 
-        className="absolute top-4 right-4 text-white hover:text-red-500"
-      >
-        ✕ {/* Close button */}
-      </button>
       <ul className="mt-16 space-y-4 px-6">
         <li><button 
           className="w-full text-left py-2 hover:bg-gray-700"

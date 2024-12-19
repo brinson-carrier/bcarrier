@@ -5,9 +5,10 @@ import CoolButton from './CoolButton';
 interface HeaderProps {
   name: string;
   onMenuClick: () => void;
+  isOpen: boolean;
 }
 
-const Header: React.FC<HeaderProps> = ({ name, onMenuClick }) => {
+const Header: React.FC<HeaderProps> = ({ name, onMenuClick, isOpen }) => {
   return (
     <header className="flex
     items-center
@@ -20,7 +21,7 @@ const Header: React.FC<HeaderProps> = ({ name, onMenuClick }) => {
     fixed
     top-0
     left-0">
-      <CoolButton text={'☰'} onClick={onMenuClick}/>
+      <CoolButton onClick={onMenuClick} isOpen={isOpen}/>
       <h1 className="flex-grow
         text-center
         text-white

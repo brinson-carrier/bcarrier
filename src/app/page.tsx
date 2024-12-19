@@ -38,7 +38,7 @@ export default function Home() {
     max-h-[60px]
     h-[10vh]
     shadow-md">
-      <Header name={"Brinson Carrier"} onMenuClick={ toggleMenu }/>
+      <Header name={"Brinson Carrier"} onMenuClick={toggleMenu} isOpen={menuOpen}/>
     </header>
 
     {/* Main Content */}

@@ -3,31 +3,63 @@
 import React from "react";
 
 interface CoolButtonProps {
-  text: string;
+  isOpen: boolean;
   onClick?: () => void;
 }
 
-const CoolButton: React.FC<CoolButtonProps> = ({ text, onClick }) => {
+const CoolButton: React.FC<CoolButtonProps> = ({ isOpen, onClick }) => {
   return (
     <button 
-        onClick={onClick} 
-        className="flex-shrink-0 
-        min-w-[40px] 
-        max-w-[60px]
-        w-[10vw]
-        min-h-[40px]
-        max-h-[60px]
-        h-[10vh]
+      onClick={onClick} 
+      className="relative flex-shrink-0 
+        w-[64px] 
+        h-[64px] 
         flex 
-        items-center 
+        flex-col 
         justify-center 
-        bg-white 
-        text-black 
-        hover:bg-gray-200
-        font-bold pl-4"
-      >
-        {text}
-      </button>
+        items-center 
+        bg-transparent 
+        focus:outline-none"
+    >
+      <div 
+        className={`absolute 
+          bg-white 
+          mt-1 
+          mb-1 
+          h-1 
+          w-8 
+          rounded 
+          transition-transform 
+          duration-900 
+          ${isOpen ? 'rotate-45' : '-translate-y-2'}`}
+        style={{ transformOrigin: 'center' }}
+      ></div>
+      <div 
+        className={`absolute 
+          bg-white 
+          mt-1 
+          mb-1 
+          h-1 
+          w-8 
+          rounded 
+          transition-opacity 
+          duration-900 
+          ${isOpen ? 'opacity-0' : 'opacity-100'}`}
+      ></div>
+      <div 
+        className={`absolute 
+          bg-white 
+          mt-1 
+          mb-1 
+          h-1 
+          w-8 
+          rounded 
+          transition-transform 
+          duration-900 
+          ${isOpen ? '-rotate-45' : 'translate-y-2'}`}
+        style={{ transformOrigin: 'center' }}
+      ></div>
+    </button>
   );
 };
 
