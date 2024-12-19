@@ -4,6 +4,7 @@ import Contact from "@/components/Contact";
 import Header from "@/components/Header";
 import SlidingMenu from "@/components/SlidingMenu";
 import Resume from "@/components/Resume";
+import AboutMe from "@/components/AboutMe";
 import { useState } from "react";
 
 export default function Home() {
@@ -42,10 +43,10 @@ export default function Home() {
     {/* Main Content */}
     <main className="flex-1 bg-gray-200 overflow-auto text-black">
       {selectedSection === 'resume' && <Resume />}
-      {selectedSection === 'about me' && <p>This is the About Me Section</p>}
-      {selectedSection === 'education' && <p>This is the Education Section</p>}
+      {selectedSection === 'about me' && <AboutMe />}
+      {/* {selectedSection === 'education' && <p>This is the Education Section</p>} */}
         
-      {!selectedSection && <p>content</p>}
+      {!selectedSection && <AboutMe />}
     </main>
     <footer className="mt-auto">
       <Contact email={email} LI_URL={LI_URL} />

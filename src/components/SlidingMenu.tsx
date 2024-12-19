@@ -34,9 +34,9 @@ const SlidingMenu: React.FC<SlidingMenuProps> = ({ isOpen, onClose, onSectionSel
         onClick={() => handleClick('about me')}>
           About Me
         </button></li>
-        <li><button className="w-full text-left py-2 hover:bg-gray-700"
+        {/* <li><button className="w-full text-left py-2 hover:bg-gray-700"
         onClick={() => handleClick('education')}>
-          Education</button></li>
+          Education</button></li> */}
       </ul>
     </aside>
   );
