@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ name, onMenuClick, isOpen }) => {
     min-h-[40px]
     max-h-[60px]
     h-[10vh]
-    bg-blue-500
+    bg-purple-900
     shadow-md
     fixed
     top-0

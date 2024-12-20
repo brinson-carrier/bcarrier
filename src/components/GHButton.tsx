@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import GitHubLogo from "/public/images/github-mark-white.png"
+import GitHubLogo from "/public/images/github-mark-white.png";
 
 interface GHButtonProps {
   url: string;
@@ -15,9 +15,7 @@ const GHButton: React.FC<GHButtonProps> = ({ url }) => {
           <Image 
             src={GitHubLogo}
             alt="GitHub" 
-            width={24} 
-            height={24} 
-            className="w-16 h-14" 
+            className="w-full max-w-[64px] min-w-[40px] h-auto"
           />
           </a>
     </button>
